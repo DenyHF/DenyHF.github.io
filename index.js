@@ -142,17 +142,16 @@ Gettext = function (e) {
             return i.className = e, i.appendChild(t.createTextNode(".")), t.documentElement.appendChild(i), i
         },
         isBlockDetectedOnDiv: function (e) {
-            return e.offsetHeight ? (TRC.pConsole("page", "warn", "No AdBlockPlus detected on div with class: " + e.className), !1) : (TRC.pConsole("page", "warn", "AdBlockPlus detected on div with class: " + e.className), !0)
+            return e.offsetHeight ? (console.log("page", "warn", "No AdBlockPlus detected on div with class: " + e.className), !1) : (console.log("page", "warn", "AdBlockPlus detected on div with class: " + e.className), !0)
         },
         isBlockDetectedOnClassNames: function (e) {
             var i, r = e.length, o;
             for (i = 0; i < r; i++) if (e[i]) {
                 o = this.createBlockDetectionDiv(e[i]);
-                console.log(o);
                 try {
                     if (this.isBlockDetectedOnDiv(o)) return !0
                 } catch (e) {
-                    TRC.pConsole("page", "error", "unable to inspect offsetHeight of div with class: " + o.className)
+                    console.log("page", "error", "unable to inspect offsetHeight of div with class: " + o.className)
                 } finally {
                     t.documentElement.removeChild(o)
                 }
