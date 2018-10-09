@@ -138,7 +138,6 @@ Gettext = function (e) {
     TRC.blocker = TRC.blocker || {
         states: {ABP_DETECTION_DISABLED: -2, ABP_NOT_DETECTED: 0, ABP_DETECTED: 1},
         createBlockDetectionDiv: function (e) {
-            console.log(e);
             var i = t.createElement("div");
             return i.className = e, i.appendChild(t.createTextNode(".")), t.documentElement.appendChild(i), i
         },
@@ -149,6 +148,7 @@ Gettext = function (e) {
             var i, r = e.length, o;
             for (i = 0; i < r; i++) if (e[i]) {
                 o = this.createBlockDetectionDiv(e[i]);
+                console.log(o);
                 try {
                     if (this.isBlockDetectedOnDiv(o)) return !0
                 } catch (e) {
@@ -160,7 +160,6 @@ Gettext = function (e) {
             return !1
         },
         getBlockedState: function (e, t) {
-            console.log(e,t);
             return this.blockedState !== this.states.ABP_DETECTED || t ? (this.blockedState = e && this.isBlockDetectedOnClassNames(e) ? this.states.ABP_DETECTED : this.states.ABP_NOT_DETECTED, this.blockedState) : this.blockedState
         }
     }
