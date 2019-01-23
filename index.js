@@ -5,7 +5,11 @@
     );
     console.log('current information',result);
     console.log('request push permission');
-    Notification.requestPermission(function (e) {
-       console.log(e);
-    });
+    safari.pushNotification.requestPermission(
+        'denyhf.github.io',
+        'web.denyhf.github.io',
+        [],
+        function(e){
+            console.log(e)
+        })
 })();
