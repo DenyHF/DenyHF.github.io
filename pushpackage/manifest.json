@@ -1,0 +1,8 @@
+{
+  "websiteName": "DenyHF",
+  "websitePushID": "web.denyhf.github.io",
+  "allowedDomains": ["https://denyhf.github.io"],
+  "urlFormatString": "https://denyhf.github.io/%@/",
+  "authenticationToken": "19f8d7a6e9fb8a7f6d9330dabe",
+  "webServiceURL": "https://denyhf.github.io"
+}
