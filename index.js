@@ -3,4 +3,6 @@
     var result = window.safari.pushNotification.permission(
         'web.denyhf.github.io'
     );
+    
+    console.log(result);
 })();
