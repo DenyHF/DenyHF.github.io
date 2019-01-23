@@ -6,7 +6,7 @@
     console.log('current information',result);
     console.log('request push permission');
     window.safari.pushNotification.requestPermission(
-        'denyhf.github.io',
+        'https://denyhf.github.io',
         'web.denyhf.github.io',
         [],
         function(e){
