@@ -1,4 +1,4 @@
-setTimeout(function(){
+setIntervar(function(){
   var informer = document.getElementById('M250178ScriptRootC649200');
   console.log(informer);
   if (informer !== null) {
